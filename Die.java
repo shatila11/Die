@@ -6,9 +6,15 @@ public class Die
 
   public Die(int v, int n)
   {
-
+  setValue(v);
+  setNumSides(n);
   }
 
+public Die()
+{
+  this(1,6);
+}
+ 
 
   public int getValue()
   {
@@ -28,4 +34,16 @@ public class Die
   {
     numSides = ns;
   }
+
+
+public int roll()
+{
+  return (1+((int)(numSides*Math.random())));
+}
+
+public String toString()
+{
+  return "Value: "+value+"NumSides: "+numSides;
+}
+
 }
