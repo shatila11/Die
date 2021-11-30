@@ -38,12 +38,30 @@ public Die()
 
 public int roll()
 {
-  return (1+((int)(numSides*Math.random())));
+  int value= (1+((int)(numSides*Math.random())));
+  this.setValue(value);
+  return value;
 }
+
+public boolean equals(Die d)
+{
+  if(this.getValue()==d.getValue())
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
 
 public String toString()
 {
-  return "Value: "+value+"NumSides: "+numSides;
+  return "Value: "+value+" NumSides: "+numSides;
 }
+
+
+
 
 }
