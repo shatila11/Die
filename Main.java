@@ -16,5 +16,12 @@ class Main {
     System.out.println("d3: "+d3);
     System.out.println("Are D1 and D3 equal? " +d1.equals(d3));
 
+    System.out.println();
+
+System.out.println("How many rolls of the die?");
+int num = it.nextInt();
+TwoDiceGames p = new TwoDiceGames(num);
+p.snakeEyes();
+
   }
 }

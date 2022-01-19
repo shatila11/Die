@@ -2,12 +2,15 @@ public class Die
 {
   private int value;
   private int numSides;
-  
+  private static int id; //Like a counter shared between classes
+  private int dieId;
 
   public Die(int v, int n)
   {
   setValue(v);
   setNumSides(n);
+  id++;
+  setDieId(id);
   }
 
 public Die()
@@ -34,7 +37,10 @@ public Die()
   {
     numSides = ns;
   }
-
+    public void setDieId(int d)
+  {
+    dieId=id;
+  }
 
 public int roll()
 {
@@ -58,7 +64,7 @@ public boolean equals(Die d)
 
 public String toString()
 {
-  return "Value: "+value+" NumSides: "+numSides;
+  return "Die ID: "+dieId+ "Value: "+value+" NumSides: "+numSides;
 }
 
 
